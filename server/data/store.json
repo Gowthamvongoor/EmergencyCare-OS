@@ -1,0 +1,2259 @@
+{
+  "users": [
+    {
+      "id": "USR-001",
+      "name": "Dr. Sarah Mitchell",
+      "email": "admin@hospital.com",
+      "password": "$2a$10$g6rkA7k0ZfXAd0y4blGeJeKg5KQZ6r756U84hOJwBZW0bPKGewHkK",
+      "role": "Admin",
+      "department": "Hospital Administration",
+      "avatar": "👩‍💼"
+    },
+    {
+      "id": "USR-002",
+      "name": "Dr. Robert Chen",
+      "email": "doctor@hospital.com",
+      "password": "$2a$10$OZBPTqj8Bw1ytGlYRKWxU.C.lcWT8MJToBIraWlAjm7bLP3uK33Pi",
+      "role": "Doctor",
+      "department": "Emergency & Trauma Surgery",
+      "avatar": "👨‍⚕️"
+    },
+    {
+      "id": "USR-003",
+      "name": "Nurse Elena Rodriguez",
+      "email": "nurse@hospital.com",
+      "password": "$2a$10$nT8Wqk0HCMkRd5pw5fW91eb6kSK5HOktMWz2/J.POYgKh/SxOV7D6",
+      "role": "Nurse",
+      "department": "ICU Triage Unit",
+      "avatar": "👩‍⚕️"
+    },
+    {
+      "id": "USR-004",
+      "name": "David Vance",
+      "email": "coordinator@hospital.com",
+      "password": "$2a$10$YI4Mkz.uXsnobawjnVR4YOirdyIblQV2KTnsmVXtFZr9QoyjdeJYy",
+      "role": "Emergency Coordinator",
+      "department": "Emergency Dispatch & Dispatch Operations",
+      "avatar": "📡"
+    }
+  ],
+  "resources": [
+    {
+      "id": "RES-ICU",
+      "name": "ICU Beds",
+      "total": 10,
+      "available": 2,
+      "allocated": 7,
+      "waiting": 2,
+      "icon": "BedDouble",
+      "unit": "Beds"
+    },
+    {
+      "id": "RES-GEN",
+      "name": "General Beds",
+      "total": 12,
+      "available": 2,
+      "allocated": 8,
+      "waiting": 1,
+      "icon": "Bed",
+      "unit": "Beds"
+    },
+    {
+      "id": "RES-DOC",
+      "name": "Doctors",
+      "total": 10,
+      "available": 2,
+      "allocated": 6,
+      "waiting": 3,
+      "icon": "Stethoscope",
+      "unit": "Personnel"
+    },
+    {
+      "id": "RES-NUR",
+      "name": "Nurses",
+      "total": 15,
+      "available": 3,
+      "allocated": 10,
+      "waiting": 0,
+      "icon": "HeartPulse",
+      "unit": "Personnel"
+    },
+    {
+      "id": "RES-AMB",
+      "name": "Ambulances",
+      "total": 8,
+      "available": 2,
+      "allocated": 5,
+      "waiting": 0,
+      "icon": "Ambulance",
+      "unit": "Vehicles"
+    },
+    {
+      "id": "RES-OT",
+      "name": "Operation Theatres",
+      "total": 4,
+      "available": 1,
+      "allocated": 3,
+      "waiting": 1,
+      "icon": "Activity",
+      "unit": "Theatres"
+    },
+    {
+      "id": "RES-VENT",
+      "name": "Ventilators",
+      "total": 10,
+      "available": 3,
+      "allocated": 7,
+      "waiting": 1,
+      "icon": "Wind",
+      "unit": "Devices"
+    },
+    {
+      "id": "RES-ER",
+      "name": "Emergency Rooms",
+      "total": 6,
+      "available": 2,
+      "allocated": 4,
+      "waiting": 0,
+      "icon": "ShieldAlert",
+      "unit": "Rooms"
+    }
+  ],
+  "patients": [
+    {
+      "id": "PAT-1001",
+      "pid": 1001,
+      "name": "James Reynolds",
+      "age": 58,
+      "gender": "Male",
+      "contact": "+1-555-0101",
+      "emergencyType": "Acute Myocardial Infarction",
+      "symptoms": "Crushing chest pain radiating to left arm, diaphoresis, dyspnea",
+      "arrivalTime": "2026-10-05T08:15:00Z",
+      "bloodGroup": "O+",
+      "medicalHistory": "Hypertension (8 yrs), Hyperlipidemia",
+      "priority": "Critical",
+      "priorityValue": 1,
+      "burstTime": 6,
+      "remainingTime": 2,
+      "processState": "RUNNING",
+      "assignedDoctor": "Dr. Robert Chen",
+      "assignedBed": "ICU-01",
+      "assignedAmbulance": "AMB-01",
+      "assignedOT": null,
+      "assignedVentilator": "VENT-01",
+      "requiredResources": [
+        "ICU Bed",
+        "Doctor",
+        "Nurse",
+        "Ventilator"
+      ],
+      "allocatedResources": [
+        "ICU Bed",
+        "Doctor",
+        "Nurse",
+        "Ventilator"
+      ],
+      "waitingFor": []
+    },
+    {
+      "id": "PAT-1002",
+      "pid": 1002,
+      "name": "Maria Santos",
+      "age": 34,
+      "gender": "Female",
+      "contact": "+1-555-0102",
+      "emergencyType": "Severe Polytrauma",
+      "symptoms": "High speed vehicular collision, pelvic fracture, blunt abdominal trauma",
+      "arrivalTime": "2026-10-05T08:22:00Z",
+      "bloodGroup": "A-",
+      "medicalHistory": "None",
+      "priority": "Critical",
+      "priorityValue": 1,
+      "burstTime": 8,
+      "remainingTime": 5,
+      "processState": "RUNNING",
+      "assignedDoctor": "Dr. Angela Rossi",
+      "assignedBed": "ICU-02",
+      "assignedAmbulance": "AMB-02",
+      "assignedOT": "OT-01",
+      "assignedVentilator": "VENT-02",
+      "requiredResources": [
+        "ICU Bed",
+        "Doctor",
+        "Nurse",
+        "Operation Theatre",
+        "Ventilator"
+      ],
+      "allocatedResources": [
+        "ICU Bed",
+        "Doctor",
+        "Nurse",
+        "Operation Theatre",
+        "Ventilator"
+      ],
+      "waitingFor": []
+    },
+    {
+      "id": "PAT-1003",
+      "pid": 1003,
+      "name": "Samuel Thorne",
+      "age": 72,
+      "gender": "Male",
+      "contact": "+1-555-0103",
+      "emergencyType": "Acute Respiratory Distress (ARDS)",
+      "symptoms": "SpO2 81%, cyanosis, severe bilateral pneumonia",
+      "arrivalTime": "2026-10-05T08:35:00Z",
+      "bloodGroup": "B+",
+      "medicalHistory": "COPD, Type 2 Diabetes",
+      "priority": "Critical",
+      "priorityValue": 1,
+      "burstTime": 5,
+      "remainingTime": 5,
+      "processState": "BLOCKED",
+      "assignedDoctor": "Dr. Marcus Vance",
+      "assignedBed": null,
+      "assignedAmbulance": null,
+      "assignedOT": null,
+      "assignedVentilator": null,
+      "requiredResources": [
+        "ICU Bed",
+        "Ventilator",
+        "Doctor",
+        "Nurse"
+      ],
+      "allocatedResources": [
+        "Doctor"
+      ],
+      "waitingFor": [
+        "ICU Bed",
+        "Ventilator"
+      ]
+    },
+    {
+      "id": "PAT-1004",
+      "pid": 1004,
+      "name": "Chloe Bennett",
+      "age": 26,
+      "gender": "Female",
+      "contact": "+1-555-0104",
+      "emergencyType": "Severe Anaphylactic Shock",
+      "symptoms": "Laryngeal edema, diffuse urticaria, hypotensive crisis",
+      "arrivalTime": "2026-10-05T08:48:00Z",
+      "bloodGroup": "AB+",
+      "medicalHistory": "Severe peanut allergy",
+      "priority": "Critical",
+      "priorityValue": 1,
+      "burstTime": 4,
+      "remainingTime": 2,
+      "processState": "RUNNING",
+      "assignedDoctor": "Dr. Kevin Patel",
+      "assignedBed": "ICU-03",
+      "assignedAmbulance": "AMB-03",
+      "assignedOT": null,
+      "assignedVentilator": "VENT-03",
+      "requiredResources": [
+        "ICU Bed",
+        "Doctor",
+        "Nurse",
+        "Ventilator"
+      ],
+      "allocatedResources": [
+        "ICU Bed",
+        "Doctor",
+        "Nurse",
+        "Ventilator"
+      ],
+      "waitingFor": []
+    },
+    {
+      "id": "PAT-1005",
+      "pid": 1005,
+      "name": "David Kim",
+      "age": 45,
+      "gender": "Male",
+      "contact": "+1-555-0105",
+      "emergencyType": "Acute Ischemic Stroke",
+      "symptoms": "Sudden onset right hemiparesis, expressive aphasia, facial droop",
+      "arrivalTime": "2026-10-05T09:05:00Z",
+      "bloodGroup": "O-",
+      "medicalHistory": "Atrial fibrillation",
+      "priority": "Critical",
+      "priorityValue": 1,
+      "burstTime": 6,
+      "remainingTime": 4,
+      "processState": "RUNNING",
+      "assignedDoctor": "Dr. Liam Scott",
+      "assignedBed": "ICU-04",
+      "assignedAmbulance": null,
+      "assignedOT": "OT-02",
+      "assignedVentilator": null,
+      "requiredResources": [
+        "ICU Bed",
+        "Doctor",
+        "Nurse",
+        "Operation Theatre"
+      ],
+      "allocatedResources": [
+        "ICU Bed",
+        "Doctor",
+        "Nurse",
+        "Operation Theatre"
+      ],
+      "waitingFor": []
+    },
+    {
+      "id": "PAT-1006",
+      "pid": 1006,
+      "name": "Eleanor Vance",
+      "age": 63,
+      "gender": "Female",
+      "contact": "+1-555-0106",
+      "emergencyType": "Ruptured Abdominal Aortic Aneurysm",
+      "symptoms": "Pulsatile abdominal mass, severe syncope, profound shock",
+      "arrivalTime": "2026-10-05T09:18:00Z",
+      "bloodGroup": "A+",
+      "medicalHistory": "Atherosclerosis, Smoking",
+      "priority": "Critical",
+      "priorityValue": 1,
+      "burstTime": 7,
+      "remainingTime": 5,
+      "processState": "RUNNING",
+      "assignedDoctor": "Dr. Angela Rossi",
+      "assignedBed": "ICU-05",
+      "assignedAmbulance": null,
+      "assignedOT": "OT-03",
+      "assignedVentilator": "VENT-04",
+      "requiredResources": [
+        "ICU Bed",
+        "Doctor",
+        "Nurse",
+        "Operation Theatre",
+        "Ventilator"
+      ],
+      "allocatedResources": [
+        "ICU Bed",
+        "Doctor",
+        "Nurse",
+        "Operation Theatre",
+        "Ventilator"
+      ],
+      "waitingFor": []
+    },
+    {
+      "id": "PAT-1007",
+      "pid": 1007,
+      "name": "Nathaniel Drake",
+      "age": 29,
+      "gender": "Male",
+      "contact": "+1-555-0107",
+      "emergencyType": "Compound Femur Fracture with Arterial Bleed",
+      "symptoms": "Open bone protrusion, active pulsating bleed, pale extremities",
+      "arrivalTime": "2026-10-05T09:30:00Z",
+      "bloodGroup": "O+",
+      "medicalHistory": "None",
+      "priority": "High",
+      "priorityValue": 2,
+      "burstTime": 5,
+      "remainingTime": 3,
+      "processState": "RUNNING",
+      "assignedDoctor": "Dr. Priya Sharma",
+      "assignedBed": "ICU-06",
+      "assignedAmbulance": "AMB-04",
+      "assignedOT": null,
+      "assignedVentilator": null,
+      "requiredResources": [
+        "ICU Bed",
+        "Doctor",
+        "Nurse"
+      ],
+      "allocatedResources": [
+        "ICU Bed",
+        "Doctor",
+        "Nurse"
+      ],
+      "waitingFor": []
+    },
+    {
+      "id": "PAT-1008",
+      "pid": 1008,
+      "name": "Grace Hopper",
+      "age": 68,
+      "gender": "Female",
+      "contact": "+1-555-0108",
+      "emergencyType": "Severe Diabetic Ketoacidosis (DKA)",
+      "symptoms": "Kussmaul breathing, fruity breath, blood glucose 650 mg/dL, lethargy",
+      "arrivalTime": "2026-10-05T09:42:00Z",
+      "bloodGroup": "B-",
+      "medicalHistory": "Type 1 Diabetes (40 yrs)",
+      "priority": "High",
+      "priorityValue": 2,
+      "burstTime": 4,
+      "remainingTime": 2,
+      "processState": "RUNNING",
+      "assignedDoctor": "Dr. Marcus Vance",
+      "assignedBed": "ICU-07",
+      "assignedAmbulance": null,
+      "assignedOT": null,
+      "assignedVentilator": "VENT-05",
+      "requiredResources": [
+        "ICU Bed",
+        "Doctor",
+        "Nurse",
+        "Ventilator"
+      ],
+      "allocatedResources": [
+        "ICU Bed",
+        "Doctor",
+        "Nurse",
+        "Ventilator"
+      ],
+      "waitingFor": []
+    },
+    {
+      "id": "PAT-1009",
+      "pid": 1009,
+      "name": "Lucas Graham",
+      "age": 41,
+      "gender": "Male",
+      "contact": "+1-555-0109",
+      "emergencyType": "Acute Appendicitis with Peritonitis",
+      "symptoms": "Severe right lower quadrant rebound tenderness, high fever, leukocytosis",
+      "arrivalTime": "2026-10-05T10:00:00Z",
+      "bloodGroup": "A+",
+      "medicalHistory": "None",
+      "priority": "High",
+      "priorityValue": 2,
+      "burstTime": 4,
+      "remainingTime": 4,
+      "processState": "WAITING",
+      "assignedDoctor": "Dr. Robert Chen",
+      "assignedBed": "GEN-01",
+      "assignedAmbulance": null,
+      "assignedOT": null,
+      "assignedVentilator": null,
+      "requiredResources": [
+        "General Bed",
+        "Doctor",
+        "Operation Theatre"
+      ],
+      "allocatedResources": [
+        "General Bed",
+        "Doctor"
+      ],
+      "waitingFor": [
+        "Operation Theatre"
+      ]
+    },
+    {
+      "id": "PAT-1010",
+      "pid": 1010,
+      "name": "Sophia Williams",
+      "age": 22,
+      "gender": "Female",
+      "contact": "+1-555-0110",
+      "emergencyType": "Status Epilepticus",
+      "symptoms": "Continuous generalized tonic-clonic seizures lasting > 20 mins",
+      "arrivalTime": "2026-10-05T10:14:00Z",
+      "bloodGroup": "O+",
+      "medicalHistory": "Juvenile myoclonic epilepsy",
+      "priority": "High",
+      "priorityValue": 2,
+      "burstTime": 5,
+      "remainingTime": 5,
+      "processState": "READY",
+      "assignedDoctor": null,
+      "assignedBed": null,
+      "assignedAmbulance": "AMB-05",
+      "assignedOT": null,
+      "assignedVentilator": null,
+      "requiredResources": [
+        "ICU Bed",
+        "Doctor",
+        "Nurse",
+        "Ventilator"
+      ],
+      "allocatedResources": [],
+      "waitingFor": [
+        "ICU Bed",
+        "Doctor"
+      ]
+    },
+    {
+      "id": "PAT-1011",
+      "pid": 1011,
+      "name": "Oliver Martinez",
+      "age": 51,
+      "gender": "Male",
+      "contact": "+1-555-0111",
+      "emergencyType": "Acute Upper GI Hemorrhage",
+      "symptoms": "Massive hematemesis, melena, postural dizziness, BP 85/50",
+      "arrivalTime": "2026-10-05T10:28:00Z",
+      "bloodGroup": "AB-",
+      "medicalHistory": "Cirrhosis, Portal hypertension",
+      "priority": "High",
+      "priorityValue": 2,
+      "burstTime": 4,
+      "remainingTime": 2,
+      "processState": "RUNNING",
+      "assignedDoctor": "Dr. Kevin Patel",
+      "assignedBed": "GEN-02",
+      "assignedAmbulance": null,
+      "assignedOT": null,
+      "assignedVentilator": null,
+      "requiredResources": [
+        "General Bed",
+        "Doctor",
+        "Nurse"
+      ],
+      "allocatedResources": [
+        "General Bed",
+        "Doctor",
+        "Nurse"
+      ],
+      "waitingFor": []
+    },
+    {
+      "id": "PAT-1012",
+      "pid": 1012,
+      "name": "Hannah Abbott",
+      "age": 19,
+      "gender": "Female",
+      "contact": "+1-555-0112",
+      "emergencyType": "Severe Asthma Exacerbation",
+      "symptoms": "Silent chest, inability to speak complete words, peak flow < 30%",
+      "arrivalTime": "2026-10-05T10:40:00Z",
+      "bloodGroup": "A+",
+      "medicalHistory": "Severe persistent asthma",
+      "priority": "High",
+      "priorityValue": 2,
+      "burstTime": 3,
+      "remainingTime": 1,
+      "processState": "RUNNING",
+      "assignedDoctor": "Dr. Liam Scott",
+      "assignedBed": "GEN-03",
+      "assignedAmbulance": null,
+      "assignedOT": null,
+      "assignedVentilator": "VENT-06",
+      "requiredResources": [
+        "General Bed",
+        "Doctor",
+        "Ventilator"
+      ],
+      "allocatedResources": [
+        "General Bed",
+        "Doctor",
+        "Ventilator"
+      ],
+      "waitingFor": []
+    },
+    {
+      "id": "PAT-1013",
+      "pid": 1013,
+      "name": "Arthur Pendelton",
+      "age": 76,
+      "gender": "Male",
+      "contact": "+1-555-0113",
+      "emergencyType": "Acute Renal Failure with Hyperkalemia",
+      "symptoms": "Anuria for 36 hours, peaked T waves on ECG, generalized edema",
+      "arrivalTime": "2026-10-05T10:55:00Z",
+      "bloodGroup": "O+",
+      "medicalHistory": "Chronic kidney disease stage 4",
+      "priority": "High",
+      "priorityValue": 2,
+      "burstTime": 4,
+      "remainingTime": 3,
+      "processState": "RUNNING",
+      "assignedDoctor": "Dr. Priya Sharma",
+      "assignedBed": "GEN-04",
+      "assignedAmbulance": null,
+      "assignedOT": null,
+      "assignedVentilator": null,
+      "requiredResources": [
+        "General Bed",
+        "Doctor",
+        "Nurse"
+      ],
+      "allocatedResources": [
+        "General Bed",
+        "Doctor",
+        "Nurse"
+      ],
+      "waitingFor": []
+    },
+    {
+      "id": "PAT-1014",
+      "pid": 1014,
+      "name": "Zoe Kravitz",
+      "age": 31,
+      "gender": "Female",
+      "contact": "+1-555-0114",
+      "emergencyType": "Suspected Ectopic Pregnancy Rupture",
+      "symptoms": "Sudden sharp pelvic pain, peritoneal signs, positive β-hCG",
+      "arrivalTime": "2026-10-05T11:10:00Z",
+      "bloodGroup": "B+",
+      "medicalHistory": "Endometriosis",
+      "priority": "High",
+      "priorityValue": 2,
+      "burstTime": 3,
+      "remainingTime": 3,
+      "processState": "READY",
+      "assignedDoctor": null,
+      "assignedBed": null,
+      "assignedAmbulance": null,
+      "assignedOT": null,
+      "assignedVentilator": null,
+      "requiredResources": [
+        "General Bed",
+        "Doctor",
+        "Operation Theatre"
+      ],
+      "allocatedResources": [],
+      "waitingFor": [
+        "General Bed",
+        "Doctor"
+      ]
+    },
+    {
+      "id": "PAT-1015",
+      "pid": 1015,
+      "name": "Benjamin Ross",
+      "age": 48,
+      "gender": "Male",
+      "contact": "+1-555-0115",
+      "emergencyType": "Deep Vein Thrombosis with Submassive PE",
+      "symptoms": "Unilateral swollen leg, pleuritic chest pain, sinus tachycardia",
+      "arrivalTime": "2026-10-05T11:22:00Z",
+      "bloodGroup": "O-",
+      "medicalHistory": "Recent trans-Atlantic flight",
+      "priority": "Medium",
+      "priorityValue": 3,
+      "burstTime": 4,
+      "remainingTime": 2,
+      "processState": "RUNNING",
+      "assignedDoctor": "Dr. Marcus Vance",
+      "assignedBed": "GEN-05",
+      "assignedAmbulance": null,
+      "assignedOT": null,
+      "assignedVentilator": null,
+      "requiredResources": [
+        "General Bed",
+        "Doctor",
+        "Nurse"
+      ],
+      "allocatedResources": [
+        "General Bed",
+        "Doctor",
+        "Nurse"
+      ],
+      "waitingFor": []
+    },
+    {
+      "id": "PAT-1016",
+      "pid": 1016,
+      "name": "Catherine Bell",
+      "age": 60,
+      "gender": "Female",
+      "contact": "+1-555-0116",
+      "emergencyType": "Complicated Pyelonephritis",
+      "symptoms": "High swinging chills, costovertebral flank tenderness, vomiting",
+      "arrivalTime": "2026-10-05T11:40:00Z",
+      "bloodGroup": "A-",
+      "medicalHistory": "Recurrent UTIs",
+      "priority": "Medium",
+      "priorityValue": 3,
+      "burstTime": 3,
+      "remainingTime": 2,
+      "processState": "RUNNING",
+      "assignedDoctor": "Dr. Kevin Patel",
+      "assignedBed": "GEN-06",
+      "assignedAmbulance": null,
+      "assignedOT": null,
+      "assignedVentilator": null,
+      "requiredResources": [
+        "General Bed",
+        "Nurse"
+      ],
+      "allocatedResources": [
+        "General Bed",
+        "Nurse"
+      ],
+      "waitingFor": []
+    },
+    {
+      "id": "PAT-1017",
+      "pid": 1017,
+      "name": "George Taylor",
+      "age": 38,
+      "gender": "Male",
+      "contact": "+1-555-0117",
+      "emergencyType": "Second Degree Thermal Burns (15% TBSA)",
+      "symptoms": "Scald burns over torso and upper extremities, severe pain",
+      "arrivalTime": "2026-10-05T11:58:00Z",
+      "bloodGroup": "B+",
+      "medicalHistory": "None",
+      "priority": "Medium",
+      "priorityValue": 3,
+      "burstTime": 4,
+      "remainingTime": 2,
+      "processState": "RUNNING",
+      "assignedDoctor": "Dr. Priya Sharma",
+      "assignedBed": "GEN-07",
+      "assignedAmbulance": null,
+      "assignedOT": null,
+      "assignedVentilator": null,
+      "requiredResources": [
+        "General Bed",
+        "Nurse"
+      ],
+      "allocatedResources": [
+        "General Bed",
+        "Nurse"
+      ],
+      "waitingFor": []
+    },
+    {
+      "id": "PAT-1018",
+      "pid": 1018,
+      "name": "Emily Watson",
+      "age": 28,
+      "gender": "Female",
+      "contact": "+1-555-0118",
+      "emergencyType": "Acute Biliary Colic",
+      "symptoms": "Intense episodic epigastric & RUQ pain post-prandial",
+      "arrivalTime": "2026-10-05T12:15:00Z",
+      "bloodGroup": "O+",
+      "medicalHistory": "Cholelithiasis",
+      "priority": "Medium",
+      "priorityValue": 3,
+      "burstTime": 3,
+      "remainingTime": 3,
+      "processState": "WAITING",
+      "assignedDoctor": null,
+      "assignedBed": "GEN-08",
+      "assignedAmbulance": null,
+      "assignedOT": null,
+      "assignedVentilator": null,
+      "requiredResources": [
+        "General Bed",
+        "Doctor"
+      ],
+      "allocatedResources": [
+        "General Bed"
+      ],
+      "waitingFor": [
+        "Doctor"
+      ]
+    },
+    {
+      "id": "PAT-1019",
+      "pid": 1019,
+      "name": "Isaac Newton",
+      "age": 54,
+      "gender": "Male",
+      "contact": "+1-555-0119",
+      "emergencyType": "Dislocated Left Shoulder",
+      "symptoms": "Prominent acromion, unable to adduct arm post-fall",
+      "arrivalTime": "2026-10-05T12:30:00Z",
+      "bloodGroup": "AB+",
+      "medicalHistory": "Hypertension",
+      "priority": "Medium",
+      "priorityValue": 3,
+      "burstTime": 2,
+      "remainingTime": 2,
+      "processState": "READY",
+      "assignedDoctor": null,
+      "assignedBed": null,
+      "assignedAmbulance": null,
+      "assignedOT": null,
+      "assignedVentilator": null,
+      "requiredResources": [
+        "Emergency Room",
+        "Doctor"
+      ],
+      "allocatedResources": [],
+      "waitingFor": []
+    },
+    {
+      "id": "PAT-1020",
+      "pid": 1020,
+      "name": "Lily Evans",
+      "age": 24,
+      "gender": "Female",
+      "contact": "+1-555-0120",
+      "emergencyType": "Laceration of Forearm with Tendon Integrity Intact",
+      "symptoms": "Glass cut, controlled bleeding, neurovascular status intact",
+      "arrivalTime": "2026-10-05T12:45:00Z",
+      "bloodGroup": "A+",
+      "medicalHistory": "None",
+      "priority": "Low",
+      "priorityValue": 4,
+      "burstTime": 2,
+      "remainingTime": 2,
+      "processState": "NEW",
+      "assignedDoctor": null,
+      "assignedBed": null,
+      "assignedAmbulance": null,
+      "assignedOT": null,
+      "assignedVentilator": null,
+      "requiredResources": [
+        "Emergency Room",
+        "Nurse"
+      ],
+      "allocatedResources": [],
+      "waitingFor": []
+    },
+    {
+      "id": "PAT-1021",
+      "pid": 1021,
+      "name": "Thomas Edison",
+      "age": 67,
+      "gender": "Male",
+      "contact": "+1-555-0121",
+      "emergencyType": "Mild Dehydration Secondary to Gastroenteritis",
+      "symptoms": "Low grade fever, mild orthostatic dry mucosa",
+      "arrivalTime": "2026-10-05T13:00:00Z",
+      "bloodGroup": "O+",
+      "medicalHistory": "Mild osteopenia",
+      "priority": "Low",
+      "priorityValue": 4,
+      "burstTime": 2,
+      "remainingTime": 2,
+      "processState": "NEW",
+      "assignedDoctor": null,
+      "assignedBed": null,
+      "assignedAmbulance": null,
+      "assignedOT": null,
+      "assignedVentilator": null,
+      "requiredResources": [
+        "General Bed",
+        "Nurse"
+      ],
+      "allocatedResources": [],
+      "waitingFor": []
+    },
+    {
+      "id": "PAT-1022",
+      "pid": 1022,
+      "name": "Nora Higgins",
+      "age": 39,
+      "gender": "Female",
+      "contact": "+1-555-0122",
+      "emergencyType": "Stable Radial Fracture",
+      "symptoms": "Mild edema, intact radial pulse, splinted pre-arrival",
+      "arrivalTime": "2026-10-05T07:10:00Z",
+      "bloodGroup": "B+",
+      "medicalHistory": "None",
+      "priority": "Low",
+      "priorityValue": 4,
+      "burstTime": 2,
+      "remainingTime": 0,
+      "processState": "COMPLETED",
+      "assignedDoctor": "Dr. Kevin Patel",
+      "assignedBed": "GEN-12",
+      "assignedAmbulance": null,
+      "assignedOT": null,
+      "assignedVentilator": null,
+      "requiredResources": [
+        "General Bed",
+        "Doctor"
+      ],
+      "allocatedResources": [],
+      "waitingFor": []
+    }
+  ],
+  "doctors": [
+    {
+      "id": "DOC-101",
+      "name": "Dr. Robert Chen",
+      "department": "Emergency & Trauma",
+      "specialization": "Trauma Surgery",
+      "status": "BUSY",
+      "assignedPatients": [
+        "PAT-1001",
+        "PAT-1009"
+      ],
+      "workload": 85,
+      "phone": "+1-555-2001"
+    },
+    {
+      "id": "DOC-102",
+      "name": "Dr. Angela Rossi",
+      "department": "Surgery",
+      "specialization": "Vascular Surgery",
+      "status": "BUSY",
+      "assignedPatients": [
+        "PAT-1002",
+        "PAT-1006"
+      ],
+      "workload": 90,
+      "phone": "+1-555-2002"
+    },
+    {
+      "id": "DOC-103",
+      "name": "Dr. Marcus Vance",
+      "department": "Critical Care",
+      "specialization": "Intensivist / Pulmonology",
+      "status": "BUSY",
+      "assignedPatients": [
+        "PAT-1003",
+        "PAT-1008",
+        "PAT-1015"
+      ],
+      "workload": 80,
+      "phone": "+1-555-2003"
+    },
+    {
+      "id": "DOC-104",
+      "name": "Dr. Kevin Patel",
+      "department": "Emergency Medicine",
+      "specialization": "Emergency Physician",
+      "status": "BUSY",
+      "assignedPatients": [
+        "PAT-1004",
+        "PAT-1011",
+        "PAT-1016"
+      ],
+      "workload": 75,
+      "phone": "+1-555-2004"
+    },
+    {
+      "id": "DOC-105",
+      "name": "Dr. Liam Scott",
+      "department": "Neurology",
+      "specialization": "Stroke Neurology",
+      "status": "BUSY",
+      "assignedPatients": [
+        "PAT-1005",
+        "PAT-1012"
+      ],
+      "workload": 70,
+      "phone": "+1-555-2005"
+    },
+    {
+      "id": "DOC-106",
+      "name": "Dr. Priya Sharma",
+      "department": "Orthopedics",
+      "specialization": "Trauma Orthopedics",
+      "status": "BUSY",
+      "assignedPatients": [
+        "PAT-1007",
+        "PAT-1013",
+        "PAT-1017"
+      ],
+      "workload": 85,
+      "phone": "+1-555-2006"
+    },
+    {
+      "id": "DOC-107",
+      "name": "Dr. Gregory House",
+      "department": "Diagnostics",
+      "specialization": "Infectious Disease",
+      "status": "AVAILABLE",
+      "assignedPatients": [],
+      "workload": 20,
+      "phone": "+1-555-2007"
+    },
+    {
+      "id": "DOC-108",
+      "name": "Dr. Meredith Grey",
+      "department": "General Surgery",
+      "specialization": "Abdominal Surgery",
+      "status": "AVAILABLE",
+      "assignedPatients": [],
+      "workload": 30,
+      "phone": "+1-555-2008"
+    },
+    {
+      "id": "DOC-109",
+      "name": "Dr. John Watson",
+      "department": "Cardiology",
+      "specialization": "Interventional Cardiology",
+      "status": "ON_BREAK",
+      "assignedPatients": [],
+      "workload": 0,
+      "phone": "+1-555-2009"
+    },
+    {
+      "id": "DOC-110",
+      "name": "Dr. Leonard McCoy",
+      "department": "Emergency Medicine",
+      "specialization": "Critical Resuscitation",
+      "status": "OFF_DUTY",
+      "assignedPatients": [],
+      "workload": 0,
+      "phone": "+1-555-2010"
+    }
+  ],
+  "nurses": [
+    {
+      "id": "NUR-201",
+      "name": "Elena Rodriguez",
+      "department": "ICU Triage",
+      "status": "BUSY",
+      "shift": "Day",
+      "assignedBeds": [
+        "ICU-01",
+        "ICU-02"
+      ]
+    },
+    {
+      "id": "NUR-202",
+      "name": "Michael O’Connor",
+      "department": "ICU Triage",
+      "status": "BUSY",
+      "shift": "Day",
+      "assignedBeds": [
+        "ICU-03",
+        "ICU-04"
+      ]
+    },
+    {
+      "id": "NUR-203",
+      "name": "Claire Temple",
+      "department": "ICU Triage",
+      "status": "BUSY",
+      "shift": "Day",
+      "assignedBeds": [
+        "ICU-05",
+        "ICU-06"
+      ]
+    },
+    {
+      "id": "NUR-204",
+      "name": "Carla Espinosa",
+      "department": "Emergency Ward",
+      "status": "BUSY",
+      "shift": "Day",
+      "assignedBeds": [
+        "GEN-01",
+        "GEN-02"
+      ]
+    },
+    {
+      "id": "NUR-205",
+      "name": "Jackie Peyton",
+      "department": "Emergency Ward",
+      "status": "BUSY",
+      "shift": "Day",
+      "assignedBeds": [
+        "GEN-03",
+        "GEN-04"
+      ]
+    },
+    {
+      "id": "NUR-206",
+      "name": "Ratched Mildred",
+      "department": "Emergency Ward",
+      "status": "BUSY",
+      "shift": "Day",
+      "assignedBeds": [
+        "GEN-05",
+        "GEN-06"
+      ]
+    },
+    {
+      "id": "NUR-207",
+      "name": "Abby Lockhart",
+      "department": "Emergency Trauma",
+      "status": "BUSY",
+      "shift": "Day",
+      "assignedBeds": [
+        "GEN-07",
+        "GEN-08"
+      ]
+    },
+    {
+      "id": "NUR-208",
+      "name": "Carol Hathaway",
+      "department": "Emergency Trauma",
+      "status": "BUSY",
+      "shift": "Day",
+      "assignedBeds": [
+        "ICU-07"
+      ]
+    },
+    {
+      "id": "NUR-209",
+      "name": "Peter Petrelli",
+      "department": "Triage Reception",
+      "status": "BUSY",
+      "shift": "Day",
+      "assignedBeds": []
+    },
+    {
+      "id": "NUR-210",
+      "name": "Sam Taggart",
+      "department": "Triage Reception",
+      "status": "BUSY",
+      "shift": "Day",
+      "assignedBeds": []
+    },
+    {
+      "id": "NUR-211",
+      "name": "Chloe Decker",
+      "department": "Emergency Ward",
+      "status": "AVAILABLE",
+      "shift": "Day",
+      "assignedBeds": []
+    },
+    {
+      "id": "NUR-212",
+      "name": "James Wilson",
+      "department": "ICU Triage",
+      "status": "AVAILABLE",
+      "shift": "Day",
+      "assignedBeds": []
+    },
+    {
+      "id": "NUR-213",
+      "name": "Sarah Manning",
+      "department": "Float Pool",
+      "status": "AVAILABLE",
+      "shift": "Day",
+      "assignedBeds": []
+    },
+    {
+      "id": "NUR-214",
+      "name": "Alex Karev",
+      "department": "Pediatric Emergency",
+      "status": "ON_BREAK",
+      "shift": "Day",
+      "assignedBeds": []
+    },
+    {
+      "id": "NUR-215",
+      "name": "April Kepner",
+      "department": "Trauma Unit",
+      "status": "OFF_DUTY",
+      "shift": "Night",
+      "assignedBeds": []
+    }
+  ],
+  "beds": [
+    {
+      "id": "ICU-01",
+      "type": "ICU",
+      "status": "OCCUPIED",
+      "patientId": "PAT-1001",
+      "patientName": "James Reynolds",
+      "ventilator": "VENT-01",
+      "floor": "Floor 3 - Critical Care"
+    },
+    {
+      "id": "ICU-02",
+      "type": "ICU",
+      "status": "OCCUPIED",
+      "patientId": "PAT-1002",
+      "patientName": "Maria Santos",
+      "ventilator": "VENT-02",
+      "floor": "Floor 3 - Critical Care"
+    },
+    {
+      "id": "ICU-03",
+      "type": "ICU",
+      "status": "OCCUPIED",
+      "patientId": "PAT-1004",
+      "patientName": "Chloe Bennett",
+      "ventilator": "VENT-03",
+      "floor": "Floor 3 - Critical Care"
+    },
+    {
+      "id": "ICU-04",
+      "type": "ICU",
+      "status": "OCCUPIED",
+      "patientId": "PAT-1005",
+      "patientName": "David Kim",
+      "ventilator": null,
+      "floor": "Floor 3 - Critical Care"
+    },
+    {
+      "id": "ICU-05",
+      "type": "ICU",
+      "status": "OCCUPIED",
+      "patientId": "PAT-1006",
+      "patientName": "Eleanor Vance",
+      "ventilator": "VENT-04",
+      "floor": "Floor 3 - Critical Care"
+    },
+    {
+      "id": "ICU-06",
+      "type": "ICU",
+      "status": "OCCUPIED",
+      "patientId": "PAT-1007",
+      "patientName": "Nathaniel Drake",
+      "ventilator": null,
+      "floor": "Floor 3 - Critical Care"
+    },
+    {
+      "id": "ICU-07",
+      "type": "ICU",
+      "status": "OCCUPIED",
+      "patientId": "PAT-1008",
+      "patientName": "Grace Hopper",
+      "ventilator": "VENT-05",
+      "floor": "Floor 3 - Critical Care"
+    },
+    {
+      "id": "ICU-08",
+      "type": "ICU",
+      "status": "CLEANING",
+      "patientId": null,
+      "patientName": null,
+      "ventilator": null,
+      "floor": "Floor 3 - Critical Care"
+    },
+    {
+      "id": "ICU-09",
+      "type": "ICU",
+      "status": "AVAILABLE",
+      "patientId": null,
+      "patientName": null,
+      "ventilator": null,
+      "floor": "Floor 3 - Critical Care"
+    },
+    {
+      "id": "ICU-10",
+      "type": "ICU",
+      "status": "AVAILABLE",
+      "patientId": null,
+      "patientName": null,
+      "ventilator": null,
+      "floor": "Floor 3 - Critical Care"
+    },
+    {
+      "id": "GEN-01",
+      "type": "General",
+      "status": "OCCUPIED",
+      "patientId": "PAT-1009",
+      "patientName": "Lucas Graham",
+      "floor": "Floor 2 - Acute Ward"
+    },
+    {
+      "id": "GEN-02",
+      "type": "General",
+      "status": "OCCUPIED",
+      "patientId": "PAT-1011",
+      "patientName": "Oliver Martinez",
+      "floor": "Floor 2 - Acute Ward"
+    },
+    {
+      "id": "GEN-03",
+      "type": "General",
+      "status": "OCCUPIED",
+      "patientId": "PAT-1012",
+      "patientName": "Hannah Abbott",
+      "floor": "Floor 2 - Acute Ward"
+    },
+    {
+      "id": "GEN-04",
+      "type": "General",
+      "status": "OCCUPIED",
+      "patientId": "PAT-1013",
+      "patientName": "Arthur Pendelton",
+      "floor": "Floor 2 - Acute Ward"
+    },
+    {
+      "id": "GEN-05",
+      "type": "General",
+      "status": "OCCUPIED",
+      "patientId": "PAT-1015",
+      "patientName": "Benjamin Ross",
+      "floor": "Floor 2 - Acute Ward"
+    },
+    {
+      "id": "GEN-06",
+      "type": "General",
+      "status": "OCCUPIED",
+      "patientId": "PAT-1016",
+      "patientName": "Catherine Bell",
+      "floor": "Floor 2 - Acute Ward"
+    },
+    {
+      "id": "GEN-07",
+      "type": "General",
+      "status": "OCCUPIED",
+      "patientId": "PAT-1017",
+      "patientName": "George Taylor",
+      "floor": "Floor 2 - Acute Ward"
+    },
+    {
+      "id": "GEN-08",
+      "type": "General",
+      "status": "OCCUPIED",
+      "patientId": "PAT-1018",
+      "patientName": "Emily Watson",
+      "floor": "Floor 2 - Acute Ward"
+    },
+    {
+      "id": "GEN-09",
+      "type": "General",
+      "status": "AVAILABLE",
+      "patientId": null,
+      "patientName": null,
+      "floor": "Floor 2 - Acute Ward"
+    },
+    {
+      "id": "GEN-10",
+      "type": "General",
+      "status": "AVAILABLE",
+      "patientId": null,
+      "patientName": null,
+      "floor": "Floor 2 - Acute Ward"
+    },
+    {
+      "id": "GEN-11",
+      "type": "General",
+      "status": "CLEANING",
+      "patientId": null,
+      "patientName": null,
+      "floor": "Floor 2 - Acute Ward"
+    },
+    {
+      "id": "GEN-12",
+      "type": "General",
+      "status": "MAINTENANCE",
+      "patientId": null,
+      "patientName": null,
+      "floor": "Floor 2 - Acute Ward"
+    }
+  ],
+  "ambulances": [
+    {
+      "id": "AMB-01",
+      "code": "Unit Alfa-1",
+      "driver": "Marcus Miller",
+      "status": "AT_HOSPITAL",
+      "assignedPatient": "PAT-1001",
+      "location": "ER Bay 1",
+      "coords": {
+        "x": 45,
+        "y": 70
+      },
+      "destination": "Metro General ED",
+      "eta": 0,
+      "fuel": 92
+    },
+    {
+      "id": "AMB-02",
+      "code": "Unit Alfa-2",
+      "driver": "Sarah Jenkins",
+      "status": "AT_HOSPITAL",
+      "assignedPatient": "PAT-1002",
+      "location": "Trauma Bay 2",
+      "coords": {
+        "x": 48,
+        "y": 72
+      },
+      "destination": "Metro General ED",
+      "eta": 0,
+      "fuel": 85
+    },
+    {
+      "id": "AMB-03",
+      "code": "Unit Bravo-1",
+      "driver": "Carlos Ortiz",
+      "status": "AT_HOSPITAL",
+      "assignedPatient": "PAT-1004",
+      "location": "ER Bay 3",
+      "coords": {
+        "x": 50,
+        "y": 68
+      },
+      "destination": "Metro General ED",
+      "eta": 0,
+      "fuel": 78
+    },
+    {
+      "id": "AMB-04",
+      "code": "Unit Bravo-2",
+      "driver": "Jessica Taylor",
+      "status": "ON_ROUTE",
+      "assignedPatient": "PAT-1007",
+      "location": "Highway 101 North Ex 42",
+      "coords": {
+        "x": 72,
+        "y": 35
+      },
+      "destination": "Metro General ED",
+      "eta": 8,
+      "fuel": 64
+    },
+    {
+      "id": "AMB-05",
+      "code": "Unit Charlie-1",
+      "driver": "Dan Higgins",
+      "status": "DISPATCHED",
+      "assignedPatient": "PAT-1010",
+      "location": "Downtown 4th Ave & Pine",
+      "coords": {
+        "x": 28,
+        "y": 40
+      },
+      "destination": "Downtown Metro",
+      "eta": 14,
+      "fuel": 88
+    },
+    {
+      "id": "AMB-06",
+      "code": "Unit Charlie-2",
+      "driver": "Rachel Green",
+      "status": "AVAILABLE",
+      "assignedPatient": null,
+      "location": "Central Ambulance Hub",
+      "coords": {
+        "x": 52,
+        "y": 50
+      },
+      "destination": null,
+      "eta": 0,
+      "fuel": 95
+    },
+    {
+      "id": "AMB-07",
+      "code": "Unit Delta-1",
+      "driver": "Tom Hanks",
+      "status": "AVAILABLE",
+      "assignedPatient": null,
+      "location": "North Substation",
+      "coords": {
+        "x": 80,
+        "y": 20
+      },
+      "destination": null,
+      "eta": 0,
+      "fuel": 100
+    },
+    {
+      "id": "AMB-08",
+      "code": "Unit Delta-2",
+      "driver": "Bruce Banner",
+      "status": "MAINTENANCE",
+      "assignedPatient": null,
+      "location": "Service Depot",
+      "coords": {
+        "x": 15,
+        "y": 85
+      },
+      "destination": null,
+      "eta": 0,
+      "fuel": 40
+    }
+  ],
+  "operationTheatres": [
+    {
+      "id": "OT-01",
+      "name": "Operating Theatre 1 (Trauma & Neuro)",
+      "status": "IN USE",
+      "currentPatient": "PAT-1002",
+      "leadSurgeon": "Dr. Angela Rossi",
+      "surgeryType": "Damage Control Laparotomy",
+      "startedAt": "2026-10-05T09:00:00Z",
+      "estCompletion": "2026-10-05T13:30:00Z",
+      "priority": "Critical"
+    },
+    {
+      "id": "OT-02",
+      "name": "Operating Theatre 2 (Vascular & Thoracic)",
+      "status": "IN USE",
+      "currentPatient": "PAT-1005",
+      "leadSurgeon": "Dr. Liam Scott",
+      "surgeryType": "Endovascular Thrombectomy",
+      "startedAt": "2026-10-05T09:40:00Z",
+      "estCompletion": "2026-10-05T12:45:00Z",
+      "priority": "Critical"
+    },
+    {
+      "id": "OT-03",
+      "name": "Operating Theatre 3 (Cardiac)",
+      "status": "IN USE",
+      "currentPatient": "PAT-1006",
+      "leadSurgeon": "Dr. Robert Chen",
+      "surgeryType": "Open AAA Repair",
+      "startedAt": "2026-10-05T10:15:00Z",
+      "estCompletion": "2026-10-05T15:00:00Z",
+      "priority": "Critical"
+    },
+    {
+      "id": "OT-04",
+      "name": "Operating Theatre 4 (General & Ortho)",
+      "status": "AVAILABLE",
+      "currentPatient": null,
+      "leadSurgeon": null,
+      "surgeryType": null,
+      "startedAt": null,
+      "estCompletion": null,
+      "priority": null
+    }
+  ],
+  "ventilators": [
+    {
+      "id": "VENT-01",
+      "model": "Hamilton-G5 Intensive",
+      "status": "IN_USE",
+      "assignedBed": "ICU-01",
+      "patientId": "PAT-1001",
+      "mode": "SIMV-PC",
+      "fiO2": 60,
+      "peep": 8
+    },
+    {
+      "id": "VENT-02",
+      "model": "Puritan Bennett 980",
+      "status": "IN_USE",
+      "assignedBed": "ICU-02",
+      "patientId": "PAT-1002",
+      "mode": "PRVC",
+      "fiO2": 100,
+      "peep": 12
+    },
+    {
+      "id": "VENT-03",
+      "model": "Dräger Evita V800",
+      "status": "IN_USE",
+      "assignedBed": "ICU-03",
+      "patientId": "PAT-1004",
+      "mode": "CPAP/PS",
+      "fiO2": 40,
+      "peep": 5
+    },
+    {
+      "id": "VENT-04",
+      "model": "Hamilton-G5 Intensive",
+      "status": "IN_USE",
+      "assignedBed": "ICU-05",
+      "patientId": "PAT-1006",
+      "mode": "BiLevel",
+      "fiO2": 70,
+      "peep": 10
+    },
+    {
+      "id": "VENT-05",
+      "model": "GE Healthcare Engström",
+      "status": "IN_USE",
+      "assignedBed": "ICU-07",
+      "patientId": "PAT-1008",
+      "mode": "SIMV-VC",
+      "fiO2": 50,
+      "peep": 6
+    },
+    {
+      "id": "VENT-06",
+      "model": "Puritan Bennett 980",
+      "status": "IN_USE",
+      "assignedBed": "GEN-03",
+      "patientId": "PAT-1012",
+      "mode": "NIV-BiPAP",
+      "fiO2": 45,
+      "peep": 5
+    },
+    {
+      "id": "VENT-07",
+      "model": "Dräger Evita V800",
+      "status": "IN_USE",
+      "assignedBed": "ICU-04",
+      "patientId": "PAT-1005",
+      "mode": "SIMV",
+      "fiO2": 50,
+      "peep": 8
+    },
+    {
+      "id": "VENT-08",
+      "model": "Hamilton-C1 Transport",
+      "status": "AVAILABLE",
+      "assignedBed": null,
+      "patientId": null,
+      "mode": "Standby",
+      "fiO2": 21,
+      "peep": 0
+    },
+    {
+      "id": "VENT-09",
+      "model": "Hamilton-C1 Transport",
+      "status": "AVAILABLE",
+      "assignedBed": null,
+      "patientId": null,
+      "mode": "Standby",
+      "fiO2": 21,
+      "peep": 0
+    },
+    {
+      "id": "VENT-10",
+      "model": "Puritan Bennett 980",
+      "status": "AVAILABLE",
+      "assignedBed": null,
+      "patientId": null,
+      "mode": "Standby",
+      "fiO2": 21,
+      "peep": 0
+    }
+  ],
+  "accessMatrix": {
+    "roles": [
+      "Admin",
+      "Doctor",
+      "Nurse",
+      "Emergency Coordinator"
+    ],
+    "resources": [
+      {
+        "key": "patient_records",
+        "name": "Patient Records"
+      },
+      {
+        "key": "emergency_queue",
+        "name": "Emergency Queue & Scheduling"
+      },
+      {
+        "key": "resource_allocation",
+        "name": "Resource Allocation"
+      },
+      {
+        "key": "doctor_management",
+        "name": "Staff Management"
+      },
+      {
+        "key": "bed_management",
+        "name": "Bed & ICU Allocation"
+      },
+      {
+        "key": "ambulance_dispatch",
+        "name": "Ambulance Dispatch"
+      },
+      {
+        "key": "system_settings",
+        "name": "System Settings & Config"
+      },
+      {
+        "key": "audit_logs",
+        "name": "Audit & System Logs"
+      },
+      {
+        "key": "deadlock_recovery",
+        "name": "Deadlock Preemption & Recovery"
+      }
+    ],
+    "permissions": {
+      "Admin": {
+        "patient_records": [
+          "READ",
+          "WRITE",
+          "UPDATE",
+          "DELETE"
+        ],
+        "emergency_queue": [
+          "READ",
+          "WRITE",
+          "UPDATE",
+          "DELETE"
+        ],
+        "resource_allocation": [
+          "READ",
+          "WRITE",
+          "UPDATE",
+          "DELETE"
+        ],
+        "doctor_management": [
+          "READ",
+          "WRITE",
+          "UPDATE",
+          "DELETE"
+        ],
+        "bed_management": [
+          "READ",
+          "WRITE",
+          "UPDATE",
+          "DELETE"
+        ],
+        "ambulance_dispatch": [
+          "READ",
+          "WRITE",
+          "UPDATE",
+          "DELETE"
+        ],
+        "system_settings": [
+          "READ",
+          "WRITE",
+          "UPDATE",
+          "DELETE"
+        ],
+        "audit_logs": [
+          "READ",
+          "WRITE",
+          "UPDATE",
+          "DELETE"
+        ],
+        "deadlock_recovery": [
+          "READ",
+          "WRITE",
+          "UPDATE",
+          "DELETE"
+        ]
+      },
+      "Doctor": {
+        "patient_records": [
+          "READ",
+          "WRITE",
+          "UPDATE"
+        ],
+        "emergency_queue": [
+          "READ",
+          "UPDATE"
+        ],
+        "resource_allocation": [
+          "READ"
+        ],
+        "doctor_management": [
+          "READ"
+        ],
+        "bed_management": [
+          "READ",
+          "UPDATE"
+        ],
+        "ambulance_dispatch": [
+          "READ"
+        ],
+        "system_settings": [],
+        "audit_logs": [
+          "READ"
+        ],
+        "deadlock_recovery": [
+          "READ"
+        ]
+      },
+      "Nurse": {
+        "patient_records": [
+          "READ",
+          "WRITE",
+          "UPDATE"
+        ],
+        "emergency_queue": [
+          "READ"
+        ],
+        "resource_allocation": [
+          "READ"
+        ],
+        "doctor_management": [
+          "READ"
+        ],
+        "bed_management": [
+          "READ",
+          "UPDATE"
+        ],
+        "ambulance_dispatch": [
+          "READ"
+        ],
+        "system_settings": [],
+        "audit_logs": [
+          "READ"
+        ],
+        "deadlock_recovery": []
+      },
+      "Emergency Coordinator": {
+        "patient_records": [
+          "READ",
+          "WRITE"
+        ],
+        "emergency_queue": [
+          "READ",
+          "WRITE",
+          "UPDATE"
+        ],
+        "resource_allocation": [
+          "READ",
+          "WRITE",
+          "UPDATE"
+        ],
+        "doctor_management": [
+          "READ",
+          "UPDATE"
+        ],
+        "bed_management": [
+          "READ",
+          "WRITE",
+          "UPDATE"
+        ],
+        "ambulance_dispatch": [
+          "READ",
+          "WRITE",
+          "UPDATE",
+          "DELETE"
+        ],
+        "system_settings": [],
+        "audit_logs": [
+          "READ"
+        ],
+        "deadlock_recovery": [
+          "READ",
+          "UPDATE"
+        ]
+      }
+    }
+  },
+  "systemLogs": [
+    {
+      "id": "LOG-1791389909510-248",
+      "timestamp": "2026-10-07T16:18:29.510Z",
+      "level": "SECURITY",
+      "subsystem": "AUTH_GUARD",
+      "message": "Invalid or expired session token attempt: jwt expired"
+    },
+    {
+      "id": "LOG-1791389909468-930",
+      "timestamp": "2026-10-07T16:18:29.469Z",
+      "level": "SECURITY",
+      "subsystem": "AUTH_GUARD",
+      "message": "Invalid or expired session token attempt: jwt expired"
+    },
+    {
+      "id": "LOG-1791211248104-606",
+      "timestamp": "2026-10-05T14:40:48.104Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791211248080-597",
+      "timestamp": "2026-10-05T14:40:48.080Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791211183549-271",
+      "timestamp": "2026-10-05T14:39:43.549Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791211183528-834",
+      "timestamp": "2026-10-05T14:39:43.528Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791211137636-954",
+      "timestamp": "2026-10-05T14:38:57.636Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791211137613-570",
+      "timestamp": "2026-10-05T14:38:57.613Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791211137479-250",
+      "timestamp": "2026-10-05T14:38:57.479Z",
+      "level": "SECURITY",
+      "subsystem": "AUTH",
+      "message": "User logged in: Dr. Sarah Mitchell [Role: Admin]"
+    },
+    {
+      "id": "LOG-1791209379676-564",
+      "timestamp": "2026-10-05T14:09:39.676Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791209379650-47",
+      "timestamp": "2026-10-05T14:09:39.650Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791209356967-234",
+      "timestamp": "2026-10-05T14:09:16.967Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791209351480-271",
+      "timestamp": "2026-10-05T14:09:11.480Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791209351462-87",
+      "timestamp": "2026-10-05T14:09:11.462Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791209349265-523",
+      "timestamp": "2026-10-05T14:09:09.265Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791209349241-590",
+      "timestamp": "2026-10-05T14:09:09.241Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791209339699-215",
+      "timestamp": "2026-10-05T14:08:59.699Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791209339674-892",
+      "timestamp": "2026-10-05T14:08:59.674Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791209272935-718",
+      "timestamp": "2026-10-05T14:07:52.935Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791209272915-256",
+      "timestamp": "2026-10-05T14:07:52.915Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791209235771-808",
+      "timestamp": "2026-10-05T14:07:15.771Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791209235749-813",
+      "timestamp": "2026-10-05T14:07:15.749Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791209200574-244",
+      "timestamp": "2026-10-05T14:06:40.574Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791209200551-589",
+      "timestamp": "2026-10-05T14:06:40.551Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "Dispatched CPU scheduling algorithm [Priority Scheduling] across 21 patient processes. Avg Waiting: 36.67s"
+    },
+    {
+      "id": "LOG-1791209200387-578",
+      "timestamp": "2026-10-05T14:06:40.387Z",
+      "level": "SECURITY",
+      "subsystem": "AUTH",
+      "message": "User logged in: Dr. Sarah Mitchell [Role: Admin]"
+    },
+    {
+      "id": "LOG-1791209013533-846",
+      "timestamp": "2026-10-05T14:03:33.533Z",
+      "level": "INFO",
+      "subsystem": "SERVER_KERNEL",
+      "message": "EmergencyCare OS Server initialized on port 5000"
+    },
+    {
+      "id": "LOG-001",
+      "timestamp": "2026-10-05T08:15:02Z",
+      "level": "INFO",
+      "subsystem": "PROCESS_MGR",
+      "message": "Process PAT-1001 created [PID: 1001, Priority: Critical]"
+    },
+    {
+      "id": "LOG-002",
+      "timestamp": "2026-10-05T08:15:05Z",
+      "level": "INFO",
+      "subsystem": "SCHEDULER",
+      "message": "PAT-1001 entered READY state; dispatched to CPU core 1"
+    },
+    {
+      "id": "LOG-003",
+      "timestamp": "2026-10-05T08:15:10Z",
+      "level": "INFO",
+      "subsystem": "RES_ALLOC",
+      "message": "Resources allocated to PAT-1001: [ICU-01, Dr. Robert Chen, VENT-01]"
+    },
+    {
+      "id": "LOG-004",
+      "timestamp": "2026-10-05T08:22:15Z",
+      "level": "INFO",
+      "subsystem": "PROCESS_MGR",
+      "message": "Process PAT-1002 created [PID: 1002, Priority: Critical]"
+    },
+    {
+      "id": "LOG-005",
+      "timestamp": "2026-10-05T08:22:20Z",
+      "level": "INFO",
+      "subsystem": "SYNC_LOCK",
+      "message": "Mutex acquired for OT-01 by Dr. Angela Rossi for PAT-1002"
+    },
+    {
+      "id": "LOG-006",
+      "timestamp": "2026-10-05T08:35:12Z",
+      "level": "WARNING",
+      "subsystem": "RES_ALLOC",
+      "message": "Resource shortage detected: 0 available ICU Beds for PAT-1003"
+    },
+    {
+      "id": "LOG-007",
+      "timestamp": "2026-10-05T08:35:15Z",
+      "level": "WARNING",
+      "subsystem": "SCHEDULER",
+      "message": "PAT-1003 moved to BLOCKED state awaiting ICU Bed release"
+    },
+    {
+      "id": "LOG-008",
+      "timestamp": "2026-10-05T09:30:40Z",
+      "level": "INFO",
+      "subsystem": "DISPATCH",
+      "message": "Ambulance AMB-04 dispatched to Highway 101 North Ex 42 for PAT-1007"
+    },
+    {
+      "id": "LOG-009",
+      "timestamp": "2026-10-05T10:00:22Z",
+      "level": "WARNING",
+      "subsystem": "DEADLOCK",
+      "message": "Potential circular wait detected between PAT-1009 and PAT-1002 on OT-01"
+    },
+    {
+      "id": "LOG-010",
+      "timestamp": "2026-10-05T10:02:10Z",
+      "level": "INFO",
+      "subsystem": "DEADLOCK",
+      "message": "Banker's Algorithm check initiated: system remains in SAFE state via sequence P2->P1->P3"
+    },
+    {
+      "id": "LOG-011",
+      "timestamp": "2026-10-05T11:10:00Z",
+      "level": "SECURITY",
+      "subsystem": "AUTH_GUARD",
+      "message": "Successful authenticated session for admin@hospital.com [Role: Admin]"
+    },
+    {
+      "id": "LOG-012",
+      "timestamp": "2026-10-05T12:00:00Z",
+      "level": "INFO",
+      "subsystem": "PROCESS_MGR",
+      "message": "Process PAT-1022 marked COMPLETED; all allocated memory partitions freed"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "AUD-1791211137485-808",
+      "timestamp": "08:08 pm",
+      "fullTimestamp": "2026-10-05T14:38:57.483Z",
+      "actor": "Dr. Sarah Mitchell",
+      "role": "Admin",
+      "action": "User Logged In",
+      "target": "Authentication System"
+    },
+    {
+      "id": "AUD-1791209200399-458",
+      "timestamp": "07:36 pm",
+      "fullTimestamp": "2026-10-05T14:06:40.398Z",
+      "actor": "Dr. Sarah Mitchell",
+      "role": "Admin",
+      "action": "User Logged In",
+      "target": "Authentication System"
+    },
+    {
+      "id": "AUD-001",
+      "timestamp": "10:32 AM",
+      "actor": "Dr. Robert Chen",
+      "role": "Doctor",
+      "action": "Allocated ICU-01 and Ventilator VENT-01",
+      "target": "Patient PAT-1001"
+    },
+    {
+      "id": "AUD-002",
+      "timestamp": "10:35 AM",
+      "actor": "Dr. Sarah Mitchell",
+      "role": "Admin",
+      "action": "Approved Emergency Override for OT-01",
+      "target": "Patient PAT-1002"
+    },
+    {
+      "id": "AUD-003",
+      "timestamp": "10:38 AM",
+      "actor": "David Vance",
+      "role": "Emergency Coordinator",
+      "action": "Dispatched Ambulance AMB-04 to Highway 101",
+      "target": "Unit AMB-04"
+    },
+    {
+      "id": "AUD-004",
+      "timestamp": "10:45 AM",
+      "actor": "Nurse Elena Rodriguez",
+      "role": "Nurse",
+      "action": "Updated Triage status from READY to RUNNING",
+      "target": "Patient PAT-1004"
+    },
+    {
+      "id": "AUD-005",
+      "timestamp": "11:15 AM",
+      "actor": "Dr. Sarah Mitchell",
+      "role": "Admin",
+      "action": "Modified System Protection Matrix permissions",
+      "target": "Security Policy"
+    },
+    {
+      "id": "AUD-006",
+      "timestamp": "11:30 AM",
+      "actor": "David Vance",
+      "role": "Emergency Coordinator",
+      "action": "Preempted OT-04 reservation for Critical Influx",
+      "target": "OT-04"
+    }
+  ],
+  "virtualFileSystem": {
+    "name": "Hospital Records",
+    "type": "directory",
+    "path": "/",
+    "children": [
+      {
+        "name": "Emergency",
+        "type": "directory",
+        "path": "/Emergency",
+        "children": [
+          {
+            "name": "2026",
+            "type": "directory",
+            "path": "/Emergency/2026",
+            "children": [
+              {
+                "name": "PAT-1001_Myocardial_Infarction.med",
+                "type": "file",
+                "size": "42 KB",
+                "patientId": "PAT-1001",
+                "createdAt": "2026-10-05",
+                "category": "Cardiology",
+                "author": "Dr. Robert Chen",
+                "content": "Patient presented with anterior STEMI. Initial troponin T 2.4 ng/mL. Heparin bolus administered. Primary PCI planned."
+              },
+              {
+                "name": "PAT-1002_Polytrauma_TraumaReport.med",
+                "type": "file",
+                "size": "118 KB",
+                "patientId": "PAT-1002",
+                "createdAt": "2026-10-05",
+                "category": "Trauma Surgery",
+                "author": "Dr. Angela Rossi",
+                "content": "FAST scan positive for free fluid in Morrison pouch. Grade 3 splenic laceration and pelvic diastasis. Massive transfusion protocol initiated."
+              },
+              {
+                "name": "PAT-1004_Anaphylaxis_EpiProtocol.med",
+                "type": "file",
+                "size": "28 KB",
+                "patientId": "PAT-1004",
+                "createdAt": "2026-10-05",
+                "category": "Allergy/Immunology",
+                "author": "Dr. Kevin Patel",
+                "content": "IM Epinephrine 0.5mg administered x2. IV Methylprednisolone and Diphenhydramine. Airway stabilized."
+              }
+            ]
+          },
+          {
+            "name": "2025",
+            "type": "directory",
+            "path": "/Emergency/2025",
+            "children": [
+              {
+                "name": "Annual_Emergency_Mortality_Report_2025.pdf",
+                "type": "file",
+                "size": "1.4 MB",
+                "patientId": null,
+                "createdAt": "2025-12-31",
+                "category": "Annual Analytics",
+                "author": "Hospital Administration",
+                "content": "Summary of 14,200 emergency presentations in 2025. Door-to-balloon time average 54 minutes. ICU survival rate 91.2%."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ICU",
+        "type": "directory",
+        "path": "/ICU",
+        "children": [
+          {
+            "name": "PAT-1003_ARDS_VentilatorWaveforms.dat",
+            "type": "file",
+            "size": "85 KB",
+            "patientId": "PAT-1003",
+            "createdAt": "2026-10-05",
+            "category": "Pulmonology",
+            "author": "Dr. Marcus Vance",
+            "content": "P/F ratio 120. Proning protocol considered. PEEP titrated to 14 cmH2O."
+          },
+          {
+            "name": "ICU_Bed_Decontamination_Logs.log",
+            "type": "file",
+            "size": "16 KB",
+            "patientId": null,
+            "createdAt": "2026-10-05",
+            "category": "Sanitation",
+            "author": "Nurse Elena Rodriguez",
+            "content": "Terminal UV cleaning verified for ICU-08 at 07:45."
+          }
+        ]
+      },
+      {
+        "name": "Surgery",
+        "type": "directory",
+        "path": "/Surgery",
+        "children": [
+          {
+            "name": "OT_Surgical_Checklist_Oct2026.med",
+            "type": "file",
+            "size": "34 KB",
+            "patientId": "PAT-1002",
+            "createdAt": "2026-10-05",
+            "category": "Surgical Safety",
+            "author": "Dr. Angela Rossi",
+            "content": "WHO surgical safety checklist completed for OT-01 and OT-02."
+          }
+        ]
+      },
+      {
+        "name": "Discharged",
+        "type": "directory",
+        "path": "/Discharged",
+        "children": [
+          {
+            "name": "PAT-1022_Discharge_Summary.med",
+            "type": "file",
+            "size": "22 KB",
+            "patientId": "PAT-1022",
+            "createdAt": "2026-10-05",
+            "category": "Discharge Record",
+            "author": "Dr. Kevin Patel",
+            "content": "Radial splint applied. Analgesia prescribed. Orthopedic outpatient follow-up scheduled in 10 days."
+          }
+        ]
+      }
+    ]
+  },
+  "updatedAt": "2026-10-07T16:18:29.510Z"
+}
